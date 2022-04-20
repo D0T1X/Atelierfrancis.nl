@@ -1,0 +1,14 @@
+# Cache settings
+# 1 YEAR
+<FilesMatch "\.(css|jpg|jpeg|png|webp|js|ico|svg|scss|eot|ttf|woff|woff2)$">
+Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# 24 HOUR
+<FilesMatch "\.(html|php|pdf)$">
+Header set Cache-Control "max-age=86400, public"
+</FilesMatch>
+
+
+# Error pages
+ErrorDocument 404 /error404.html
